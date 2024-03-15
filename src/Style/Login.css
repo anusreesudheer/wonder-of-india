@@ -1,0 +1,25 @@
+.login-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100%;
+  }
+  
+  .image_container {
+    flex: 1;
+  }
+  
+  .login-box {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #430f58;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #6643b5;
+    background-color:#fff;
+  }
+  
+  /* .login-image {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+   */

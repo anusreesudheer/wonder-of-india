@@ -31,7 +31,7 @@ function Header() {
           <div className="nav_wrapper d-flex align-items-center  justify-content-between">
              {/*-----------------------logo----------------------------- */}   
              <div className="logo">
-              <h2><SiYourtraveldottv  className="icon"/>Wonder of india</h2>
+              <h2><SiYourtraveldottv  className="icon"/>Wonders of india</h2>
               </div> 
               {/*-----------------------logo end----------------------------- */}   
                {/*  -----------------------menu----------------------------- */   }
@@ -54,8 +54,8 @@ function Header() {
 
                 <div className="nav_right d-flex align-item-center gap-4 ">
                 <div className="nav_btns d-flex align-item-center gap-4 ">
-                  <Button className="btn secondary__btn"><Link to='/ login'>Login</Link></Button>
-                  <Button className="btn primary__btn"><Link to='/ signup'>Signup</Link></Button>
+                  <Button className="btn secondary__btn"><Link to='/login'>Login</Link></Button>
+                  <Button className="btn secondary__btn"><Link to='/signup'>Resigter</Link></Button>
                 </div>
                 <span className="logo_menu">
                 <i><BsThreeDotsVertical  className="icon"/></i>

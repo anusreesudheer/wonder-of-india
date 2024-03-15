@@ -1,18 +1,18 @@
 import React from 'react'
 
-import Header from './../Header/Header';
-import Routers from "../../Router/Routers";
-import Footer from './../Footer/Footer';
+import Header from '../Header/Header';
+import Routers from '../../Router/Routers';
+// import Footer from '../Footer/Footer';
 
 
-function Navbar() {
+function MainLayout() {
   return (
   <>
    <Header/>
    <Routers/>
-   <Footer/>
+   {/* <Footer/> */}
    </>
   )
 }
 
-export default Navbar
+export default MainLayout

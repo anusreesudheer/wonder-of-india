@@ -1,0 +1,7 @@
+.newsletter{
+    color: var(--primaryColor) ;
+}
+.newsletterp{
+    color: var(--SecondaryColor) ;
+    font-size: 1.5rem;
+}

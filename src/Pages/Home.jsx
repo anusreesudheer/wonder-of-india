@@ -5,7 +5,7 @@ import logo from '../assets/Logo/logo.jpg'
 import { Container ,Row, Col } from 'react-bootstrap'
 import FeaturedList from '../Components/FeaturedTour/FeaturedList'
 // import Subtitle from '../Shared/Subtitle'
-// import Newsletter from '../Shared/Newsletter'
+import Newsletter from '../Shared/Newsletter'
 
 
 function Home() {
@@ -27,7 +27,7 @@ function Home() {
             </span>
              
         </div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit expedita voluptatibus voluptatem ullam illum, provident, corrupti nostrum officiis dolorem consequuntur magni est, voluptate fuga quasi harum. Maxime dolorem obcaecati unde!</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis itaque sint dicta rem quod. Omnis, rerum, debitis reiciendis a nesciunt totam fuga natus, unde ab ad dolorem inventore exercitationem delectus.</p>
      </div>
      </section>
     <section>
@@ -38,6 +38,7 @@ function Home() {
             <h2 className="featured_tour">Our sites</h2>
           </Col>
           <FeaturedList/>
+          <Newsletter/>
         </Row>
       </Container>
     </section>

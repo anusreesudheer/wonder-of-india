@@ -34,7 +34,7 @@
         flex-direction: column;
          align-items: stretch; 
         margin: auto;
-        color: black;
+        color: var(--primaryColor);
         z-index: 100;
     }
 
