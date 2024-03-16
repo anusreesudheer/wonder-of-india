@@ -16,7 +16,9 @@ const Newsletter = () => {
             </Col>
 
             <Col lg='6'>
-            <img src={world} alt=""  /> 
+               <div className="newletter_img">
+             <img src={world} alt=""  /> 
+             </div>
             </Col>
 
             <Col lg='6'>

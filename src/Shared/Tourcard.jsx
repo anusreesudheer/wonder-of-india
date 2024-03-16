@@ -7,37 +7,34 @@ import { Link } from 'react-router-dom'
 
 
 function Tourcard({tour}) {
-const {id, title, city, photo , price, avgrating, reviews}=tour;
+const { title, city, photo , price, avgrating,}=tour;
   return (
-    <div className="tour_card">.
+    <div className="tour_card">
     <Card>
-      <div className='tour_img'>
+      <div className="tour_img">
         <img src={photo} alt='tour_img' />
-       
       </div>
-    </Card>
-    <CardBody>
+      <CardBody>
       <div className="card_top d-flex align-items-center justify-content-between">
-        <span className="tour_location d-flex align-items-center  gap-1">
-        <h5><i><RiMapPinLine  className="icon"/></i>{city}</h5>
+        <span className="tour_location d-flex align-items-center  ">
+        <i> <h6><RiMapPinLine  className="icon"/></h6></i>{city}
         </span>
-        <span className="tour_rating d-flex align-items-center  gap-1">
-        <h5><i><FaStar  className="icon"/></i>{avgrating }{''}</h5>
-        
-        <span>({reviews.length})</span>
-        
+        <span className="tour_rating d-flex align-items-center  ">
+        <i><h6><FaStar  className="icon"/></h6></i>{avgrating }{''}
         </span>
       </div>
 
       <h5 className="tour_title"><Link to={'/travelplan/${id}'}>{title}</Link></h5>
-      <div className="card_bottom d-flex align-items-centee justify-content-between mt-3">
-        <h5>Rs{price}<span>/per person</span></h5>
+      <div className="card_bottom d-flex align-items-center justify-content-between mt-3">
+        <h6>Rs{price}<span>/per person</span></h6>
 
         <button className="btn booking_btn">
           <Link to={'/travelplan/${id}'}>Book Now</Link>
         </button>
       </div>
     </CardBody>
+    </Card>
+    
     </div>
   )
 }

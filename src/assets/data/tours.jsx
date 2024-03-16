@@ -12,89 +12,42 @@ const tours = [
     id: "01",
     title: "Jaipur",
     city: "Jaipur",
-    distance: 3000,
-    price: 9900,
-    maxGroupSize: 10,
+    price: 99,
     desc: "this is the description",
-    reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
-    ],
-    avgRating: 4.5,
-    photo: jaipur_1,
-    featured: true,
+    photo:jaipur_1
   },
+
   {
     id: "02",
     title: "Manali",
     city: "Manali",
-    distance: 400,
     price: 99,
-    maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
-    ],
-    avgRating: 4.5,
-    photo: manali,
-    featured: true,
+    photo:manali
   },
+
   {
     id: "03",
     title: "Munnar",
     city: "Munnar",
-    distance: 5000,
     price: 99,
-    maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
-    ],
-    avgRating: 4.5,
     photo: Munnar,
-    featured: true,
   },
   {
     id: "04",
     title: "Edakkal Cave",
     city: "Wayanad",
-    distance: 500,
     price: 99,
-    maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
-    ],
-    avgRating: 4.5,
     photo: wayanad,
-    featured: true,
   },
   {
     id: "05",
     title: "Golconda Fort",
     city: "Hyderabad",
-    distance: 500,
     price: 99,
-    maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
-    ],
-    avgRating: 4.5,
     photo: hyderabad,
     featured: false,
   },
@@ -102,19 +55,10 @@ const tours = [
     id: "06",
     title: "Kapaleeshwarar Temple",
     city: "Chennai",
-    distance: 500,
     price: 99,
-    maxGroupSize: 8,
+  
     desc: "this is the description",
-    reviews: [
-      {
-        name: "jhon doe",
-        rating: 4.6,
-      },
-    ],
-    avgRating: 4.5,
     photo: chennai,
-    featured: false,
   },
   {
     id: "07",

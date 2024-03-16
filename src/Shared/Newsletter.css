@@ -5,3 +5,7 @@
     color: var(--SecondaryColor) ;
     font-size: 1.5rem;
 }
+
+.newsletter_img{
+    width: 10%;
+}

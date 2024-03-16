@@ -24,15 +24,58 @@
     border-radius: 3px 0 0 0;
 }
 
-.card_top span{
+.card_top span i {
     color: var(--SecondaryColor);
 }
 
 .tour_rating{
     font-size: 0.9rem;
-    color: var(--textColor);
+    color: var(--text-color);
+    .icon{ 
+        font-size: 0.9rem;
+
+    }
 }
 
 .tour_location{
     color:var( --heading-color);
+    font-weight:500;
+    font-size: .9rem;
+    .icon{ 
+        font-size: 0.9rem;
+
+    }
 }
+ 
+.tour_rating i,
+.tour_location i{
+    font-size: .1rem;
+}
+
+.tour_title{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.tour_title a{
+    color: var(--SecondaryColor);
+    transition: .3s;
+}
+
+.tour_title a:hover{
+    color: var(--SecondaryColor);
+} 
+
+.card_bottom h6{
+    color: var(--SecondaryColor);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card_bottom h6 span{
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: .5rem;
+}
+

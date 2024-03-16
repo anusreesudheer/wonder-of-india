@@ -1,10 +1,8 @@
 import React from 'react'
 import '../Style/Home.css'
 import logo from '../assets/Logo/logo.jpg'
-
 import { Container ,Row, Col } from 'react-bootstrap'
 import FeaturedList from '../Components/FeaturedTour/FeaturedList'
-// import Subtitle from '../Shared/Subtitle'
 import Newsletter from '../Shared/Newsletter'
 
 
