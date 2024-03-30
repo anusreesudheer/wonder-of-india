@@ -17,7 +17,7 @@ const nav_links=[
   },
 
   {
-    path:'/travelplan',
+    path:'/travel',
     display:'Travelplan'
   },
 

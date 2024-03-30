@@ -32,7 +32,6 @@ function Home() {
       <Container>
         <Row>
           <Col lg='12' className="mb-5">
-             {/* <Subtitle Subtitle={explore}/> */}
             <h2 className="featured_tour">Our sites</h2>
           </Col>
           <FeaturedList/>

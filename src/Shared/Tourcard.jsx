@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 
 function Tourcard({tour}) {
-const { title, city, photo , price, avgrating,}=tour;
+const { _id,title, city, photo , price, avgrating,}=tour;
   return (
     <div className="tour_card">
     <Card>
@@ -24,14 +24,14 @@ const { title, city, photo , price, avgrating,}=tour;
         </span>
       </div>
 
-      <h5 className="tour_title"><Link to={'/travelplan/${id}'}>{title}</Link></h5>
+      <h5 className="tour_title"><Link to={`/travel/${_id}`}>{title}</Link></h5>
       <div className="card_bottom d-flex align-items-center justify-content-between mt-3">
         <h6>Rs{price}<span>/per person</span></h6>
 
         <button className="btn booking_btn">
-          <Link to={'/travelplan/${id}'}>Book Now</Link>
+          <Link to={`/travel/${_id}`}>Book Now</Link>
         </button>
-      </div>
+    </div>    
     </CardBody>
     </Card>
     
