@@ -1,6 +1,6 @@
 import jaipur_1 from "../Jaipur/jaipur_1.jpg";
 import manali from "../Jaipur/manali.jpg";
-import Munnar from "../Jaipur/munnar.jpg";
+import Munnar from "../Jaipur/Munnar.jpg";
 import wayanad from "../Jaipur/wayanad.png";
 import hyderabad from "../Jaipur/hyderabad.jpg";
 import chennai from "../Jaipur/chennai.jpg";
