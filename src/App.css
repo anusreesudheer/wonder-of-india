@@ -8,10 +8,10 @@
 }
 
 :root {
-  --primaryColor:#430f58;
-  --SecondaryColor:#6643b5;
-  --heading-color:#8594e4;
-  --textColor:hsl(240,4%,36%);
+  --primaryColor:#8711b6;
+  --SecondaryColor:#4808df;
+  --heading-color:#3044b4;
+  --textColor:hsl(240, 33%, 36%);
   --font-name:'Satisfy', cursive;
  }
  body{
@@ -59,7 +59,7 @@ section{
 .primary__btn a {
   font-size: 1.1rem;
   text-decoration: none;
-  color:#6643b5;
+  color:#541ed3;
 }
 .primary__btn a:hover {
   color: inherit;

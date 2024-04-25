@@ -6,6 +6,7 @@ import { FaStar } from "react-icons/fa"
 import { Link } from 'react-router-dom'
 
 
+
 function Tourcard({tour}) {
 const { _id,title, city, photo , price, avgrating,}=tour;
   return (

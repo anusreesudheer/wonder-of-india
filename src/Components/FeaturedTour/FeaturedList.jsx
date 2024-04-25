@@ -1,12 +1,12 @@
 import React from 'react'
 import Tourcard from '../../Shared/Tourcard'
-//import tourData from  '../../assets/data/tours'
+
 import { Col } from 'react-bootstrap'
 import useFetch from './../../Hook/useFetch'
 import { BASE_URL } from './../../Utils/config'
 
 function FeaturedList() {
-  const {data: featuredTour } = useFetch(`${BASE_URL}/tours/search/getFeaturedTour`)
+  const {data: featuredTour } = useFetch(`${BASE_URL}/tours/`)
   return (
     <>
     { featuredTour?.map((tour)=>(

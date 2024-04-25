@@ -6,6 +6,13 @@ import Travelplan from './../Pages/Travelplan';
 import Login from './../Pages/Login';
 import Signup from './../Pages/Signup';
 import { Thankyou } from '../Pages/Thankyou';
+import Profile from '../Pages/Profile';
+import About from '../Pages/About';
+import Admin from '../Components/Admin/Admin';
+import Update from '../Components/Admin/Update';
+import Getalltours from '../Components/Admin/Getalltours';
+import Delete from '../Components/Admin/Delete'
+
 //import Travel from './../Pages/Travel'
 
 function Routers() {
@@ -18,7 +25,13 @@ function Routers() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/thankyou' element={<Thankyou/>}/>
-
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/Admin' element={<Admin/>}/>
+        <Route path='/getalltours' element={<Getalltours/>}/>
+        <Route path='/delete/:id' element={<Delete/>}/>
+        <Route path='/update/:id' element={<Update/>}/>
+        
     </Routes>
   )
 }

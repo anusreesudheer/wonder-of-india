@@ -1,7 +1,36 @@
-.thank_you span i{
+/* .thank_you span i{
     font-size: 4rem;
 }
 
 .thank_you h1{
     font-size: 3.6;
-}
+} */
+
+.thank_you {
+    text-align: center;
+    margin-top: 50px; 
+  }
+  
+  .thankyou {
+    font-size: 60px; 
+    color: green; 
+  }
+  
+  .thank_you h1 {
+    font-size: 36px; 
+    margin-top: 20px; 
+  }
+  
+  .thank_you h3 {
+    font-size: 24px;
+    margin-top: 10px; 
+  }
+  
+  .second {
+    margin-top: 30px; 
+  }
+  
+  .second a {
+    text-decoration:#4808df ;
+    /* color: white;  */
+  }

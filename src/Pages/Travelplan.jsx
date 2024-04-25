@@ -4,16 +4,16 @@ import {Container,Row,Col} from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import tourData from '../assets/data/tours'
 import Booking from '../Components/Booking/Booking'
-//import useFetch from './../Hook/useFetch'
-//import {BASE_URL} from './../Utils/config'
+import useFetch from './../Hook/useFetch'
+import {BASE_URL} from './../Utils/config'
 
 
 function Travelplan() {
 
   const {id} = useParams()
 
-  const tour= tourData.find(tour=> tour.id === id)
-  //const {data:tour} = useFetch(`${BASE_URL}/tours/${id}`)
+  //const tour= tourData.find(tour=> tour.id === id)
+  const {data:tour} = useFetch(`${BASE_URL}/tours/${id}`)
 
   const {photo, title, desc}=tour;
  

@@ -1,0 +1,47 @@
+.del_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.del_box {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #430f58;
+  box-shadow: 0 0 10px #6643b5;
+}
+
+.del_box h4 {
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+.del_bt {
+  background-color: #007bff;
+  color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.del_bt:hover {
+  background-color: #0056b3;
+}
+
+.del_bt a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.del_bt a:hover {
+  text-decoration: none;
+}

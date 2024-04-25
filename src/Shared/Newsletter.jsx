@@ -30,7 +30,7 @@ const Newsletter = () => {
                     <h5 className='newsletter'>Subscribe now to get useful traveling information</h5>
                     <div className='newsletter_input'>
                         <input type='email' placeholder='Enter the email'></input>
-                        <Button className='btn primary__btn auth_btn' type='submit'>Subscribe</Button>
+                        <Button className=' btn primary__btn auth_btn' type='submit'>Subscribe</Button>
                     </div>
                 </div>
             </Col>
