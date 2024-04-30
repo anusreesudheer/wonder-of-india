@@ -81,7 +81,7 @@ const Update = () => {
                             <input type="text" name="photo" placeholder="Photo URL"value={update.photo} onChange={handleInputChange} />
                         </label>
                         <br />
-                        <Button className='btn primary__btn  ' type='submit'>Update</Button>
+                        <Button className='btn primary__btn auth_btn   ' type='submit'><Link to={`/getalltours`}>Update</Link></Button>
                         <Button className='btn secondary__btn'><Link to={`/getalltours`}>Cancel</Link></Button>
             {/* <Button className='btn primary__btn' type='submit'>Update</Button> */}
           </form>

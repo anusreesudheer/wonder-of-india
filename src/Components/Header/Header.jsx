@@ -64,7 +64,7 @@ function Header() {
               </ul>
             </div>
             {/*-----------------------menu end----------------------------- */}
-
+            <Button className='btn secondary__btn' ><Link to='/admin'>Admin</Link></Button>
             <div className="nav_right d-flex align-item-center gap-4 ">
               <div className="nav_btns d-flex align-item-center gap-4 ">
 

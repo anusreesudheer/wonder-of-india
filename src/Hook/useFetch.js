@@ -10,6 +10,7 @@ const useFetch = (url) => {
          setLoading(true)
 
          try {
+            console.log(url)
             const res = await fetch(url)
 
             if(!res.ok) {

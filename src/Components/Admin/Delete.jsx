@@ -31,7 +31,7 @@ const Delete = () => {
     <div className='del_container'>
       <table className='del_box'>
         <h4>Do you want to delete</h4>
-        <Button onClick={handleSubmit} className=' t btn secondary__btn'>Delete</Button>
+        <Button onClick={handleSubmit} className=' t btn secondary__btn'><Link to={`/getalltours`}>Delete</Link></Button>
       <Button className=' del_bt btn secondary__btn'><Link to={`/getalltours`}>Cancel</Link></Button>
       </table>
       

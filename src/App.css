@@ -50,7 +50,7 @@ section{
 }
 
 .primary__btn {
-  background: var(--SecondaryColor) !important;
+  background: var(#fff) !important;
   border: none !important;
   border-radius: 50px !important;
   padding: 0.4rem 1.5rem !important;
@@ -59,7 +59,7 @@ section{
 .primary__btn a {
   font-size: 1.1rem;
   text-decoration: none;
-  color:#541ed3;
+  color:#fff;
 }
 .primary__btn a:hover {
   color: inherit;
