@@ -6,7 +6,7 @@ import useFetch from './../../Hook/useFetch'
 import { BASE_URL } from './../../Utils/config'
 
 function FeaturedList() {
-  const {data: featuredTour } = useFetch(`${BASE_URL}/tours/`)
+  const {data: featuredTour } = useFetch(`${BASE_URL}/tours`)
   return (
     <>
     { featuredTour?.map((tour)=>(
