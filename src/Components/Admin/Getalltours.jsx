@@ -5,7 +5,7 @@ import { Container, Row,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 // import Tourcard from '../../Shared/Tourcard';
 
-const Getalltours = () => {
+const Getalltours = (userId) => {
   const [tour, setTour] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Getalltours = () => {
       }
     };
     fetchTours();
-  }, []);
+  }, [userId]);
   return (
     <Container>
       <Row>

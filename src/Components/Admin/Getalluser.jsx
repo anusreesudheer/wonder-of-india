@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import './Getallbookings.css'
 
-const Getalluser = () => {
+const Getalluser = (userId) => {
   const [user, setUser] = useState([]);
 
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await (await axios.get(`${BASE_URL}/auth/ `)).data
+        const response = await (await axios.get(`${BASE_URL}/auth `)).data
         setUser(response.data);
       } catch (error) {
         //console.error('Error fetching bookings:', error);
       }
     };
     fetchBookings();
-  }, []);
+  }, [userId]);
 
 
 
