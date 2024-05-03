@@ -12,7 +12,7 @@ const Getallbookings = ({userId}) => {
     useEffect(() => {
       const fetchBookings = async () => {
         try {
-          const response = await (await axios.get(`http://localhost:4000/api/v1/booking/ `)).data
+          const response = await (await axios.get(`${BASE_URL}/booking/ `)).data
           setBookings(response.data);
         } catch (error) {
           //console.error('Error fetching bookings:', error);

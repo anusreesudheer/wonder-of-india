@@ -14,7 +14,7 @@ const Delete = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.delete(`http://localhost:4000/api/v1/tours/${id}`, del);
+      const response = await axios.delete(`${BASE_URL}/tours/${id}`, del);
       console.log('Tour location deleted successfully:', response.data);
       setDel(response.data);
       alert("Tour location  deleted  successfully")

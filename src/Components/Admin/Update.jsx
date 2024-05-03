@@ -30,7 +30,7 @@ const Update = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.put(`http://localhost:4000/api/v1/tours/${id}`,update);
+        const response = await axios.put(`${BASE_URL}/tours/${id}`,update);
         console.log('Tour location updated successfully:', response.data);
       // Redirect or show success message
       alert("Tour location updated successfully")

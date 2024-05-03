@@ -8,7 +8,7 @@ const Getalluser = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await (await axios.get(`http://localhost:4000/api/v1/auth `)).data
+        const response = await (await axios.get(`${BASE_URL}/auth/ `)).data
         setUser(response.data);
       } catch (error) {
         //console.error('Error fetching bookings:', error);

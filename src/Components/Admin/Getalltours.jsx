@@ -11,7 +11,7 @@ const Getalltours = () => {
   useEffect(() => {
     const fetchTours = async () => {
       try {
-        const response = await (await axios.get(`http://localhost:4000/api/v1/tours `)).data
+        const response = await (await axios.get(`${BASE_URL}/tours `)).data
         setTour(response.data);
       } catch (error) {
         //console.error('Error fetching bookings:', error);
