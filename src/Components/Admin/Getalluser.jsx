@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import './Getallbookings.css'
+import { BASE_URL } from '../../Utils/config';
 
 const Getalluser = (userId) => {
   const [user, setUser] = useState([]);

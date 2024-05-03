@@ -3,6 +3,7 @@ import axios from 'axios';
 import './Getalltours.css'
 import { Container, Row,Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BASE_URL } from '../../Utils/config';
 // import Tourcard from '../../Shared/Tourcard';
 
 const Getalltours = (userId) => {
@@ -24,7 +25,7 @@ const Getalltours = (userId) => {
       <Row>
         <div className="box-container ">
           <div className="col-ml-12">
-            <h3>User Details</h3>
+            <h3>Tour Details</h3>
             <table className='table table- dark table-bordered'>
               <tbody className='box-t'>
                 {tour && (tour.map(tour => {

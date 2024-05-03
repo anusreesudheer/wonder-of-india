@@ -24,7 +24,7 @@ const Getallbookings = ({userId}) => {
   return (
     <div className="box-container ">
       <div className="col-ml-12">
-        <h3>User Details</h3>
+        <h3>Booking Details</h3>
         <table className='table table- dark table-bordered'>
           <tbody className='box-t'>
         {/* {bookings.length && (<h1> Total Bookings{bookings.length} bookings </h1>)} */}

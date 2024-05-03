@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { Col, Container, Row ,Button} from 'react-bootstrap';
 import './AddTour.css'
+import { BASE_URL } from '../../Utils/config';
 
 const AddTour = () => {
     const [tourLocationData, setTourLocationData] = useState({
@@ -20,7 +21,7 @@ const AddTour = () => {
     const handleAddTourLocation = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4000/api/v1/tours', tourLocationData);
+            const response = await axios.post(`${BASE_URL}/tours`, tourLocationData);
             console.log('Tour location added successfully:', response.data);
             // Reset form fields after successful submission
             setTourLocationData({
