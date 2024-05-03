@@ -11,7 +11,7 @@ const AddTour = () => {
         price: '',
         maxGroupSize: '',
         desc: '',
-        photo: null, // Store file object here
+        photo: null, // Updated to hold file
     });
 
     const handleInputChange = (event) => {
@@ -19,8 +19,8 @@ const AddTour = () => {
         setTourLocationData({ ...tourLocationData, [name]: value });
     };
 
-    const handleFileInputChange = (event) => {
-        const file = event.target.files[0]; // Get the first selected file
+    const handlePhotoUpload = (event) => {
+        const file = event.target.files[0];
         setTourLocationData({ ...tourLocationData, photo: file });
     };
 
@@ -33,7 +33,7 @@ const AddTour = () => {
             formData.append('price', tourLocationData.price);
             formData.append('maxGroupSize', tourLocationData.maxGroupSize);
             formData.append('desc', tourLocationData.desc);
-            formData.append('photo', tourLocationData.photo); // Append the file to FormData
+            formData.append('photo', tourLocationData.photo);
 
             const response = await axios.post(`${BASE_URL}/tours`, formData);
             console.log('Tour location added successfully:', response.data);
@@ -63,36 +63,36 @@ const AddTour = () => {
                                 <div className="mb-3">
                                     <form onSubmit={handleAddTourLocation}>
                                         <label>
-                                            <h3>Title</h3>
+                                            <h3>title</h3>
                                             <input type="text" name="title" placeholder="Title" value={tourLocationData.title} onChange={handleInputChange} />
                                         </label>
-                                        <br/>
+                                        <br />
                                         <label>
-                                            <h5>City</h5>
+                                            <h5>city</h5>
                                             <input type="text" name="city" placeholder="City" value={tourLocationData.city} onChange={handleInputChange} />
                                         </label>
-                                        <br/>
+                                        <br />
                                         <label>
-                                            <h5>Price</h5>
+                                            <h5>price</h5>
                                             <input type="number" name="price" placeholder="Price" value={tourLocationData.price} onChange={handleInputChange} />
                                         </label>
-                                        <br/>
+                                        <br />
                                         <label>
                                             <h5>Max. group size</h5>
                                             <input type="number" name="maxGroupSize" placeholder="Max Group Size" value={tourLocationData.maxGroupSize} onChange={handleInputChange} />
                                         </label>
-                                        <br/>
+                                        <br />
                                         <label>
                                             <h5>Description</h5>
                                             <textarea name="desc" placeholder="Description" value={tourLocationData.desc} onChange={handleInputChange}></textarea>
                                         </label>
-                                        <br/>
+                                        <br />
                                         <label>
                                             <h5>Photo</h5>
-                                            <input type="file" name="photo" onChange={handleFileInputChange} />
+                                            <input type="file" name="photo" onChange={handlePhotoUpload} />
                                         </label>
-                                        <br/>
-                                        <Button className='tn btn primary__btn auth_btn ' type='submit'>Add Location</Button>
+                                        <br />
+                                        <Button className='tn btn primary__btn auth_btn' type='submit'>Add Location</Button>
                                     </form>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@ const AddTour = () => {
                 </Col>
             </Row>
         </Container>
-    )
-}
+    );
+};
 
 export default AddTour;
