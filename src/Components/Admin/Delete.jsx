@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Button, Container, Row,Col } from 'react-bootstrap';
 import { Link,useNavigate } from 'react-router-dom';
+import { BASE_URL } from '../../Utils/config';
 import './Delete.css'
 
 const Delete = () => {
