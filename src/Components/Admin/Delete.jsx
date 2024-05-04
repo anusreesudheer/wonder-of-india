@@ -18,7 +18,7 @@ const Delete = () => {
       console.log('Tour location deleted successfully:', response.data);
       setDel(response.data);
       alert("Tour location  deleted  successfully")
-      navigate('/getalltour')
+      navigate('/getalltours')
 
     } catch (error) {
       //alert("server error")
