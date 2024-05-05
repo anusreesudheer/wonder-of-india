@@ -11,46 +11,31 @@ const AddTour = () => {
         price: '',
         maxGroupSize: '',
         desc: '',
-        photo: null,
+        photo: '',
         
     });
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setTourLocationData({ ...tourLocationData, [name]: value });
     };
-
-    const handleFileInputChange = (event) => {
-        const file = event.target.files[0];
-        setTourLocationData({ ...tourLocationData, photo: file });
-    };
-
     const handleAddTourLocation = async (event) => {
         event.preventDefault();
         try {
-            const formData = new FormData();
-            for (const key in tourLocationData) {
-                formData.append(key, tourLocationData[key]);
-            }
-            const response = await axios.post(`${BASE_URL}/tours`, formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
+            const response = await axios.post(`${BASE_URL}/tours `, tourLocationData);
             console.log('Tour location added successfully:', response.data);
+            // Reset form fields after successful submission
             setTourLocationData({
                 title: '',
                 city: '',
-                price: '',
-                maxGroupSize: '',
+                price: 0,
+                maxGroupSize: 0,
                 desc: '',
-                photo: null,
-                featured: false,
+                photo: '',
+                featured: false
             });
-            console.log(response)
-            alert('Tour location added successfully:', response.data);
+            alert("Tour location added successfully:', response.data")
         } catch (error) {
-            //console.error('Error adding tour location:', error);
-            alert('something went wrong:');
+           // console.error('Error adding tour location:', error);
         }
     };
 
@@ -92,7 +77,7 @@ const AddTour = () => {
                                         <br />
                                         <label>
                                             <h5>Photo URL</h5>
-                                            <input type="file" name="photo" onChange={handleFileInputChange} />
+                                            <input type="file" name="photo" placeholder="Photo URL" value={tourLocationData.photo} onChange={handleInputChange} />
                                         </label>
                                         <br />
                                         <Button className='tn btn primary__btn auth_btn ' type='submit'>Add Location</Button>
