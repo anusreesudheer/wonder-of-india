@@ -49,7 +49,8 @@ const AddTour = () => {
             console.log(response)
             alert('Tour location added successfully:', response.data);
         } catch (error) {
-            console.error('Error adding tour location:', error);
+            //console.error('Error adding tour location:', error);
+            alert('something went wrong:');
         }
     };
 
