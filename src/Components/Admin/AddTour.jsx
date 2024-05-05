@@ -93,7 +93,7 @@ const handleAddTourLocation = async (event) => {
                                         <br />
                                         <label>
                                             <h5>Photo URL</h5>
-                                            <input type="file" name="photo"  value={tourLocationData.photo} onChange={handleInputChange} />
+                                            <input type="file" name="photo"   onChange={handleInputChange} />
                                         </label>
                                         <br />
                                         <Button className='tn btn primary__btn auth_btn ' type='submit'>Add Location</Button>
