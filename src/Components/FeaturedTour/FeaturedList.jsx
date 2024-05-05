@@ -1,6 +1,5 @@
 import React from 'react'
 import Tourcard from '../../Shared/Tourcard'
-
 import { Col } from 'react-bootstrap'
 import useFetch from './../../Hook/useFetch'
 import { BASE_URL } from './../../Utils/config'

@@ -77,7 +77,7 @@ const AddTour = () => {
                                         <br />
                                         <label>
                                             <h5>Photo URL</h5>
-                                            <input type="file" name="photo" placeholder="Photo URL" value={tourLocationData.photo} onChange={handleInputChange} />
+                                            <input type="text" name="photo" placeholder="Photo URL" value={tourLocationData.photo} onChange={handleInputChange} />
                                         </label>
                                         <br />
                                         <Button className='tn btn primary__btn auth_btn ' type='submit'>Add Location</Button>
