@@ -11,49 +11,47 @@ const AddTour = () => {
         price: '',
         maxGroupSize: '',
         desc: '',
-        photo: null // Change to null initially
+        photo: null,
+        
     });
-    
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setTourLocationData({ ...tourLocationData, [name]: value });
+    };
 
-   // const [enterImg,setEnterImg] = useState(null);
+    const handleFileInputChange = (event) => {
+        const file = event.target.files[0];
+        setTourLocationData({ ...tourLocationData, photo: file });
+    };
 
-   const handleInputChange = (event) => {
-    const { name, value, files } = event.target;
-    // If it's a file input, set the file instead of the value
-    const updatedValue = name === 'photo' ? files[0] : value;
-    setTourLocationData({ ...tourLocationData, [name]: updatedValue });
-};
-
-const handleAddTourLocation = async (event) => {
-    event.preventDefault();
-    try {
-        const formData = new FormData();
-        // Append all form data to FormData
-        for (const key in tourLocationData) {
-            formData.append(key, tourLocationData[key]);
-        }
-        const response = await axios.post(`${BASE_URL}/tours`, formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data'
+    const handleAddTourLocation = async (event) => {
+        event.preventDefault();
+        try {
+            const formData = new FormData();
+            for (const key in tourLocationData) {
+                formData.append(key, tourLocationData[key]);
             }
-        });
-        console.log('Tour location added successfully:', response.data);
-        // Reset form fields after successful submission
-        setTourLocationData({
-            title: '',
-            city: '',
-            price: '',
-            maxGroupSize: '',
-            desc: '',
-            photo: null,
-            featured: false
-        });
-        alert('Tour location added successfully:', response.data);
-    } catch (error) {
-       // console.error('Error adding tour location:', error);
-    }
-};
-
+            const response = await axios.post(`${BASE_URL}/tours`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
+            console.log('Tour location added successfully:', response.data);
+            setTourLocationData({
+                title: '',
+                city: '',
+                price: '',
+                maxGroupSize: '',
+                desc: '',
+                photo: null,
+                featured: false,
+            });
+            console.log(response)
+            alert('Tour location added successfully:', response.data);
+        } catch (error) {
+            console.error('Error adding tour location:', error);
+        }
+    };
 
     return (
         <Container>
@@ -93,7 +91,7 @@ const handleAddTourLocation = async (event) => {
                                         <br />
                                         <label>
                                             <h5>Photo URL</h5>
-                                            <input type="file" name="photo"   onChange={handleInputChange} />
+                                            <input type="file" name="photo" onChange={handleFileInputChange} />
                                         </label>
                                         <br />
                                         <Button className='tn btn primary__btn auth_btn ' type='submit'>Add Location</Button>
