@@ -41,8 +41,8 @@ const Getalltours = (userId) => {
                     <h4>Photo: {tour.photo}</h4>
 
                   
-                    <Button className='btn secondary__btn'><Link to={`/update/${tour._id}`}>Update</Link></Button>
-                   <Button className='btn secondary__btn'><Link to={`/delete/${tour._id}`}>Delete</Link></Button> 
+                    <Button className=' butn btn secondary__btn'><Link to={`/update/${tour._id}`}>Update</Link></Button>
+                   <Button className='butn btn secondary__btn'><Link to={`/delete/${tour._id}`}>Delete</Link></Button> 
                    
                   </tr>
 

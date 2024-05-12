@@ -1,4 +1,4 @@
-.box-container{
+/* .box-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,4 +14,65 @@
     border-radius: 8px;
     box-shadow: 0 0 10px #6643b5;
     background-color:#fff;
+  } */
+
+
+  /* Getalltours.css */
+
+.box-container {
+    margin-top: 20px;
   }
+  
+  .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+  }
+  
+  .box-t h4 {
+    margin-bottom: 10px;
+  }
+  
+  /* .secondary__btn {
+    margin-right: 10px;
+  }
+  
+  .secondary__btn a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .secondary__btn a:hover {
+    text-decoration: none;
+  }
+  
+  .secondary__btn .btn {
+    background-color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .secondary__btn .btn:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  
+  .secondary__btn .btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  }
+   */
