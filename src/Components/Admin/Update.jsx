@@ -3,7 +3,7 @@ import { Button, Container, Row,Col } from 'react-bootstrap';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './Update.css'
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import { BASE_URL } from '../../Utils/config';
 
 const Update = () => {
@@ -19,7 +19,6 @@ const Update = () => {
     photo: '',
   });
 
-//   u
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
