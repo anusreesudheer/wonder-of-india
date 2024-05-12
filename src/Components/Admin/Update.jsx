@@ -4,6 +4,8 @@ import axios from 'axios';
 import { useParams, } from 'react-router-dom';
 import './Update.css'
 import { Link } from 'react-router-dom';
+import {BASE_URL} from '../../Utils/config'
+
 const Update = () => {
     const { id } = useParams();
    

@@ -9,7 +9,8 @@ import { Link } from 'react-router-dom'
 
 function Tourcard({tour}) {
 const { _id,title, city, photo , price, avgrating,}=tour;
-console.log("Photo prop:", photo);
+//console.log("Photo prop:", tour);
+//tour.photo=photo
   return (
     <div className="tour_card">
     <Card>
