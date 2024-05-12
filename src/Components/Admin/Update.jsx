@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Container, Row,Col } from 'react-bootstrap';
 import axios from 'axios';
-import { useParams, } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './Update.css'
 import { Link } from 'react-router-dom';
-import {BASE_URL} from '../../Utils/config'
+import { BASE_URL } from '../../Utils/config';
 
 const Update = () => {
     const { id } = useParams();
-   
+    const navigate = useNavigate()
   const [update, setUpdate] = useState({
    
     title: '',
@@ -34,12 +34,12 @@ const Update = () => {
     try {
         const response = await axios.put(`${BASE_URL}/tours/${id}`,update);
         console.log('Tour location updated successfully:', response.data);
-      // Redirect or show success message
+        setUpdate(response.data);
       alert("Tour location updated successfully")
-      // navigate('/getalltour')
+       navigate('/getalltour')
 
     } catch (error) {
-        // alert("server error")
+         alert("server error")
     }
   };
   
@@ -83,7 +83,7 @@ const Update = () => {
                             <input type="text" name="photo" placeholder="Photo URL"value={update.photo} onChange={handleInputChange} />
                         </label>
                         <br />
-                        <Button className='btn primary__btn auth_btn   ' type='submit'><Link to={`/getalltours`}>Update</Link></Button>
+                        <Button className='btn primary__btn auth_btn   ' type='submit'>Update</Button>
                         <Button className='btn secondary__btn'><Link to={`/getalltours`}>Cancel</Link></Button>
             {/* <Button className='btn primary__btn' type='submit'>Update</Button> */}
           </form>
