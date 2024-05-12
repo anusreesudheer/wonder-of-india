@@ -19,60 +19,46 @@
 
   /* Getalltours.css */
 
-.box-container {
+  .box-container {
     margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
   }
   
   .table {
     width: 100%;
-    margin-bottom: 1rem;
-    background-color: transparent;
+    border-collapse: collapse;
   }
   
-  .table th,
-  .table td {
-    padding: 0.75rem;
-    vertical-align: top;
-    border-top: 1px solid #dee2e6;
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
   }
   
-  .table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
+  .table th {
+    background-color: #f2f2f2;
   }
   
-  .table tbody + tbody {
-    border-top: 2px solid #dee2e6;
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
   }
   
-  .box-t h4 {
-    margin-bottom: 10px;
+  .table tbody tr:hover {
+    background-color: #ddd;
   }
   
   /* .secondary__btn {
     margin-right: 10px;
-  }
-  
-  .secondary__btn a {
+    background-color: #007bff;
     color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
     text-decoration: none;
   }
   
-  .secondary__btn a:hover {
-    text-decoration: none;
-  }
-  
-  .secondary__btn .btn {
-    background-color: #6c757d;
-    border-color: #6c757d;
-  }
-  
-  .secondary__btn .btn:hover {
-    background-color: #5a6268;
-    border-color: #545b62;
-  }
-  
-  .secondary__btn .btn:focus {
-    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+  .secondary__btn:hover {
+    background-color: #0056b3;
   }
    */
