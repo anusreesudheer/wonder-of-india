@@ -35,7 +35,7 @@ const Update = () => {
         console.log('Tour location updated successfully:', response.data);
         setUpdate(response.data);
       alert("Tour location updated successfully")
-       navigate('/getalltour')
+       navigate('/getalltours')
 
     } catch (error) {
          alert("server error")
