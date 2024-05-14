@@ -1,4 +1,4 @@
-/* .box-container{
+.box-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,11 +14,11 @@
     border-radius: 8px;
     box-shadow: 0 0 10px #6643b5;
     background-color:#fff;
-  } */
+  }
 
 
-  /* Getalltours.css */
-
+ 
+/* 
   .box-container {
     margin-top: 20px;
     border: 1px solid #ccc;

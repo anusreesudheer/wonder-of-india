@@ -38,7 +38,7 @@ const Getalltours = (userId) => {
                     <h4>Price: {tour.price}</h4>
                     <h4>maxGroupSize: {tour.maxGroupSize}</h4>
                     <h4>Description: {tour.desc}</h4>
-                    <h4>Photo: {tour.photo}</h4>
+                    {/* <h4>Photo: {tour.photo}</h4> */}
 
                   
                     <Button className=' butn btn secondary__btn'><Link to={`/update/${tour._id}`}>Update</Link></Button>
