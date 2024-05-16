@@ -1,6 +1,7 @@
 {
   "name": "travelplanner",
-  "private": true,
+  "homepage": "https://wonder-of-india-fe.onrender.com",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
