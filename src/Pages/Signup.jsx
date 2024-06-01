@@ -5,34 +5,50 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../Style/Signup.css';
 import { BASE_URL } from './../Utils/config';
 import { AuthContext } from './../Context/AuthContext';
-import axios from 'axios'
+import axios from 'axios';
 
 const Signup = () => {
-
-  const [book, setBook] = useState({
+  const [user, setUser] = useState({
     userName: '',
     email: '',
-    password: ''
-  })
+    password: '',
+    role: 'user', // default role is 'user'
+    secretKey: '' // secret key for admin
+  });
 
   const { dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (user.role === 'admin' && user.secretKey !== 'anvika') {
+      alert('Invalid secret key for admin registration');
+      return;
+    }
     try {
-      const response = await axios.post(`${BASE_URL}/auth/register`, book);
-      dispatch({ type: 'REGISTER_SUCCESS' });
+      const response = await axios.post(`${BASE_URL}/auth/register`, user);
+      console.log('user detail',user);
+      
+      dispatch({ type: 'REGISTER_SUCCESS',payload:user});
       alert('Successfully registered');
       navigate('/login');
     } catch (error) {
-      alert('Registration failed. Please try again later.');
+      if (user.email && user.userName) {
+        console.log(user.email)
+        console.log(user.userName)
+        alert("email is existing");
+      } else {
+        alert('Registration failed. Please try again later.');
+      }
     }
   };
 
   const handleChange = e => {
-    setBook(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    setUser(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleRoleChange = e => {
+    setUser(prev => ({ ...prev, role: e.target.value }));
   };
 
   return (
@@ -43,35 +59,44 @@ const Signup = () => {
             <div className="image_container">
               <img src={signup} alt="" />
             </div>
-            <br />
             <div className="signup_box">
               <h2>Signup</h2>
-              <div className="mb-3">
-                <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit}>
+                <div>
+                  <h5>Role:</h5>
                   <label>
-                    <h5>Username:</h5>
-                    <input type="text" placeholder="" name="userName" value={book.userName} onChange={handleChange} required />
+                    <h5>User <input type="radio" value="user" checked={user.role === 'user'} onChange={handleRoleChange} /></h5>
                   </label>
                   <label>
-                    <h5>Email:</h5>
-                    <input type="email" placeholder="" name="email" value={book.email} onChange={handleChange} required />
+                    <h5>Admin <input type="radio" value="admin" checked={user.role === 'admin'} onChange={handleRoleChange} /></h5>
                   </label>
-                  <label>
-                    <h5>Password:</h5>
-                    <input type="password" placeholder="" name="password" value={book.password} onChange={handleChange} required />
-                  </label>
-                  <br />
-                  <Button className=' but btn primary__btn auth_btn ' type='submit'>register</Button>
-                </form>
-                <div className="text_centre">
-                  <p>
-                    <Link to="/login">
-                      <h6>
-                        <i>Go to login</i>
-                      </h6>
-                    </Link>
-                  </p>
                 </div>
+                {user.role === 'admin' && (
+                  <label>
+                    <h5>Secret Key:</h5>
+                    <input type="password" name="secretKey" value={user.secretKey} onChange={handleChange} required />
+                  </label>
+                )}
+                <label>
+                  <h5>Username:</h5>
+                  <input type="text" name="userName" value={user.userName} onChange={handleChange} required />
+                </label>
+                <label>
+                  <h5>Email:</h5>
+                  <input type="email" name="email" value={user.email} onChange={handleChange} required />
+                </label>
+                <label>
+                  <h5>Password:</h5>
+                  <input type="password" name="password" value={user.password} onChange={handleChange} required />
+                </label>
+                <Button className='btn primary__btn auth_btn' type='submit'>Register</Button>
+              </form>
+              <div className="text_center">
+                <p>
+                  <Link to="/login">
+                    <h6><i>Go to login</i></h6>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

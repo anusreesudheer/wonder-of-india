@@ -2,13 +2,13 @@ import React, { useEffect, useContext } from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { AuthContext } from '../Context/AuthContext';
-
+//import Getallbookings from '../Components/Admin/Getallbookings';
 import MyBookings from '../Shared/MyBookings';
 
 const Profile = () => {
 
   const { user } = useContext(AuthContext)
-  //const user = JSON.parse(localStorage.getItem("currentUser"))
+  
   console.log(user)
 
   useEffect(() => {
@@ -16,8 +16,8 @@ const Profile = () => {
     if (!user) {
       window.location.href = '/login'
     }
-  }
-  )
+  },
+  [user]);
   return (
     <div className='ml-3 mt-3 d flex'>
       <Tabs>
@@ -28,7 +28,10 @@ const Profile = () => {
           <h3>Name : {user && user.userName} </h3>
           <h3>Email : {user && user.email}</h3>
         </Tab>
-        
+        <Tab eventKey="" title="Bookings">
+        {/* {user && <MyBookings userId={user._id} />} */}
+        {user && <MyBookings userId={user._id}/>}
+        </Tab>
       </Tabs>
     </div>
   )
@@ -37,26 +40,3 @@ const Profile = () => {
 export default Profile
 
 
-// export function MyBookings() {
-
-//   const { user } = useContext(AuthContext)
-
-//   useEffect(async () => {
-
-//     try {
-//       const response = await axios.get(`${BASE_URL}/booking/:id`, { userid: user._id }).data
-//       console.log(response)
-//     } catch (error) {
-//       console.log(error)
-//     }
-
-//   }
-//   )
-
-
-//   return (
-//     <div>
-//       <h3>My Bookings</h3>
-//     </div>
-//   )
-// }

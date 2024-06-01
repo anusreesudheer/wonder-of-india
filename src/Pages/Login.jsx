@@ -12,10 +12,12 @@ const Login = () => {
 
   const [book, setBook] = useState({
     email: "",
-    password: ""
+    password: "",
+   //role:""
   })
-  const [error, setError] = useState('');
-  const { dispatch } = useContext(AuthContext)
+
+  //const [error, setError] = useState('');
+  const { dispatch,user } = useContext(AuthContext)
   const navigate = useNavigate()
 
   const handleChange = e => {
@@ -29,9 +31,16 @@ const Login = () => {
 
     try {
       const response = await axios.post(`${BASE_URL}/auth/login`, book);
+      
       dispatch({ type: 'LOGIN_SUCCESS', payload: response.data.data });
-      alert('Successfully logged in');
-      navigate('/');
+      console.log(response.data.data)
+      const {role} =response.data.data
+      console.log(role)
+      if (role === 'admin') {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
     } catch (error) {
       alert('Login failed. Please try again later.');
     }

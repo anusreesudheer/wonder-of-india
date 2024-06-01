@@ -12,6 +12,7 @@ import Admin from '../Components/Admin/Admin';
 import Update from '../Components/Admin/Update';
 import Getalltours from '../Components/Admin/Getalltours';
 import Delete from '../Components/Admin/Delete'
+import MyBookings from '../Shared/MyBookings';
 
 //import Travel from './../Pages/Travel'
 
@@ -26,6 +27,7 @@ function Routers() {
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/thankyou' element={<Thankyou/>}/>
         <Route path='/profile' element={<Profile/>}/>
+        <Route path='/MyBookings' element={<MyBookings/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/Admin' element={<Admin/>}/>
         <Route path='/getalltours' element={<Getalltours/>}/>
