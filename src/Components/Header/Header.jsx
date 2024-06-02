@@ -68,22 +68,29 @@ function Header() {
             <div className="nav_right d-flex align-item-center gap-4 ">
               <div className="nav_btns d-flex align-item-center gap-4 ">
 
-                {
+              {
                   user ? (
-
                     <>
-                      <Button className='btn secondary__btn' ><Link to='/profile'>Profile</Link></Button>
+                      {user.role === 'admin' ? (
+                        <>
+                          <Button className='btn secondary__btn'><Link to='/admin'>Admin Page</Link></Button>
+                        </>
+                      ) : (
+                        <>
+                          <Button className='btn secondary__btn'><Link to='/profile'>Profile</Link></Button>
+                          
+                        </>
+                      )}
                       <h5 className='mb-0'>{user.userName}</h5>
                       <Button className='btn primary__btn auth_btn' onClick={logout}>Logout</Button>
-
                     </>
                   ) : (
                     <>
-
                       <Button className='btn secondary__btn'><Link to='/login'>Login</Link></Button>
                       <Button className='btn secondary__btn'><Link to='/signup'>Register</Link></Button>
                     </>
-                  )}
+                  )
+                }
 
               </div>
               <span className="logo_menu">
