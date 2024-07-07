@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../Utils/config';
 
-function MyBookings() {
+function MyBookings({ userId }) {
   const [bookings, setBookings] = useState([]);
-  const [userId, setUserId] = useState('');
 
   useEffect(() => {
-    fetchBookings();
+    if (userId) {
+      fetchBookings(userId);
+    }
   }, [userId]); // Run fetchBookings whenever userId changes
 
-  const fetchBookings = async () => {
+  const fetchBookings = async (userId) => {
     try {
+      console.log(userId)
       const response = await axios.get(`${BASE_URL}/booking/${userId}`);
 
       if (response.data.success) {
@@ -21,19 +23,15 @@ function MyBookings() {
         setBookings([]);
       }
     } catch (error) {
-      console.error('Error fetching data:', error);
+      //console.error('Error fetching data:', error);
       setBookings([]);
     }
-  };
-
-  const handleInputChange = (e) => {
-    setUserId(e.target.value);
   };
 
   return (
     <div>
       <h1>My Bookings</h1>
-      
+
       <div>
         {bookings.length > 0 ? (
           <div>
