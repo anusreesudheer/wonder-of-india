@@ -1,10 +1,10 @@
 
 .signup_container {
-  margin-top: 50px; /* Adjust margin as needed */
+  margin-top: 50px; 
 }
 
 .image_container img {
-  max-width: 100%; /* Ensure image stays within its container */
+  max-width: 100%; 
 }
 
 .signup_box {

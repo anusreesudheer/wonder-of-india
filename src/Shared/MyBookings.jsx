@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../Utils/config';
+import './MyBookings.css'
 
 function MyBookings({ userId }) {
   const [bookings, setBookings] = useState([]);
@@ -9,11 +10,11 @@ function MyBookings({ userId }) {
     if (userId) {
       fetchBookings(userId);
     }
-  }, [userId]); // Run fetchBookings whenever userId changes
+  }, [userId]);
 
   const fetchBookings = async (userId) => {
     try {
-      console.log(userId)
+      console.log(userId);
       const response = await axios.get(`${BASE_URL}/booking/${userId}`);
 
       if (response.data.success) {
@@ -29,15 +30,16 @@ function MyBookings({ userId }) {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>My Bookings</h1>
 
-      <div>
+      <div className="bookings-container">
         {bookings.length > 0 ? (
           <div>
             <h2>Bookings:</h2>
             <ul>
               {bookings.map((booking) => (
+                <div className="bookings">
                 <li key={booking._id}>
                   <p>User ID: {booking.userId}</p>
                   <p>Tour Name: {booking.tourName}</p>
@@ -46,11 +48,12 @@ function MyBookings({ userId }) {
                   <p>Phone: {booking.phone}</p>
                   <p>Booked At: {booking.bookAt}</p>
                 </li>
+                </div>
               ))}
             </ul>
           </div>
         ) : (
-          <p>No bookings found</p>
+          <p className="no-bookings">No bookings found</p>
         )}
       </div>
     </div>

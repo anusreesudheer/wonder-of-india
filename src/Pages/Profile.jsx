@@ -3,6 +3,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { AuthContext } from '../Context/AuthContext';
 import MyBookings from '../Shared/MyBookings';
+import "../Style/Profile.css";
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
@@ -14,17 +15,21 @@ const Profile = () => {
   }, [user]);
 
   return (
-    <div className='ml-3 mt-3 d flex'>
-      <Tabs>
+    <div className='profile-container'>
+      <Tabs className='profile-tabs'>
         <Tab eventKey="profile" title="Profile">
-          <h1>My profile</h1>
-          <br />
-          <h3>User-id: {user && user._id}</h3>
-          <h3>Name: {user && user.userName}</h3>
-          <h3>Email: {user && user.email}</h3>
+          <div className='profile-content'>
+            <h1>My profile</h1>
+            <br />
+            <h3>User-id: {user && user._id}</h3>
+            <h3>Name: {user && user.userName}</h3>
+            <h3>Email: {user && user.email}</h3>
+          </div>
         </Tab>
         <Tab eventKey="bookings" title="Bookings">
-          {user && <MyBookings userId={user._id} />} 
+          <div className='profile-content'>
+            {user && <MyBookings userId={user._id} />} 
+          </div>
         </Tab>
       </Tabs>
     </div>
